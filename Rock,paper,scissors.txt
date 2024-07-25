@@ -1,0 +1,27 @@
+import random
+def get_choice():
+choices=['rock','paper','scissors']
+return
+random.choice(choices)
+def get_user_choice():
+choice=input("Enter your CHOICE")
+while choice not in['rock','paper','scissors']:
+choice=input("Invalid choice")
+return choice
+def determine_winner(user_choice,choice):
+if user_choice==choice:
+return "Tie!"
+elif(user_choice=='rock' and choice=='scissors') or (user_choice=='paper' and choice=='rock') or (user choice=='scissors' and choice=='paper'):
+return "You WON!!!"
+else:
+return "You LOST!!!"
+def play_game():
+user_choice=get_user_choice()
+choice=get_choice()
+get_choice()
+print("You chose:{user_choice}")
+print("You chose:{choice}")
+result=determine_winner(user_choice,choice)
+print(result)
+if_name_=="_main_":
+play_game()
